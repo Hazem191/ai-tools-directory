@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Build Stack — AI Tools Directory for Hackathon Teams</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <div class="brand">
+      <div class="brand-mark">&gt;_</div>
+      <div class="brand-text">The Build Stack <span class="dim">/ AI Tools Directory</span></div>
+    </div>
+    <div class="stat-pill"><b id="stat-count">38</b> tools indexed</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Compiled from real hackathon teams</p>
+    <h1 class="hero-title">Every AI tool your team used, <span class="accent">searchable in one place.</span></h1>
+    <p class="hero-sub">A reference directory of 38 AI assistants, coding agents, design tools, diagramming apps, and deployment platforms — what each one does, where it fits in your workflow, and how to use it. Type to search, or filter by category.</p>
+
+    <div class="console">
+      <div class="console-bar">
+        <div class="dot-row"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+        <input id="search" type="text" placeholder="Search tools, features, or use cases… e.g. 'ERD', 'deploy', 'wireframe'" autocomplete="off">
+        <span class="kbd">/</span>
+      </div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="results-meta" id="results-meta"></div>
+  </section>
+
+  <main>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" style="display:none;">No tools match that search. Try a different keyword.</div>
+  </main>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Built for hackathon teams &mdash; press <span style="color:var(--text)">/</span> to focus search, <span style="color:var(--text)">Esc</span> to close a card. Data compiled from 16 team submissions across a software documentation &amp; design hackathon.
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
