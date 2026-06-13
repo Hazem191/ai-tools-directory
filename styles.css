@@ -109,11 +109,23 @@
   .top-inner{ display:flex; align-items:center; justify-content:space-between; padding:16px 0; gap:16px; flex-wrap:wrap; }
   .brand{ display:flex; align-items:center; gap:10px; }
   .brand-mark{
-    width:30px;height:30px;border-radius:8px;
+    width:40px;height:40px;border-radius:12px;
     background:linear-gradient(135deg,var(--accent),#22d3ee);
     display:flex;align-items:center;justify-content:center;
-    font-family:var(--mono); font-weight:700; font-size:14px; color:#062a26;
     flex-shrink:0;
+    box-shadow:0 10px 24px rgba(56,189,248,.18), inset 0 1px 0 rgba(255,255,255,.25);
+    border:1px solid rgba(255,255,255,.18);
+    animation:logoPulse 2.8s ease-in-out infinite;
+    transform-origin:center;
+  }
+  .brand-mark svg{ width:26px; height:26px; display:block; animation:logoIconFloat 2.8s ease-in-out infinite; }
+  @keyframes logoPulse{
+    0%,100%{ transform:translateY(0) scale(1); box-shadow:0 10px 24px rgba(56,189,248,.18), inset 0 1px 0 rgba(255,255,255,.25); }
+    50%{ transform:translateY(-2px) scale(1.04); box-shadow:0 14px 28px rgba(94,234,212,.28), inset 0 1px 0 rgba(255,255,255,.35); }
+  }
+  @keyframes logoIconFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-1px); }
   }
   .brand-text{ font-family:var(--display); font-weight:700; font-size:18px; letter-spacing:.2px; }
   .brand-text .dim{ color:var(--text-dim); font-weight:400; }

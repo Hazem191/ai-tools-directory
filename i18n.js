@@ -1,6 +1,6 @@
 const I18N = {
   en: {
-    brandName: "AINavigator",
+    brandName: "AI Navigator",
     brandSub: "/ AI Tools Guide",
     toolsIndexed: "tools listed",
     langSwitchLabel: "AR",
@@ -37,7 +37,7 @@ const I18N = {
     }
   },
   ar: {
-    brandName: "AINavigator",
+    brandName: "AI Navigator",
     brandSub: "/ دليل الأدوات الذكية",
     toolsIndexed: "أداة متاحة",
     langSwitchLabel: "EN",
