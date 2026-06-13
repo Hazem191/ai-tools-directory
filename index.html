@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Build Stack — AI Tools Directory for Hackathon Teams</title>
+<title>AINavigator — Discover the Perfect AI Tool for Your Next Project</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Almarai:wght@400;700&family=Dosis:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,22 +15,30 @@
   <div class="wrap top-inner">
     <div class="brand">
       <div class="brand-mark">&gt;_</div>
-      <div class="brand-text">The Build Stack <span class="dim">/ AI Tools Directory</span></div>
+      <div class="brand-text"><span data-i18n="brandName">AINavigator</span> <span class="dim" data-i18n="brandSub">/ AI Tools Guide</span></div>
     </div>
-    <div class="stat-pill"><b id="stat-count">38</b> tools indexed</div>
+    <div class="top-controls">
+      <div class="stat-pill"><b id="stat-count">38</b> <span data-i18n="toolsIndexed">tools listed</span></div>
+      <button class="toggle-btn theme-btn" id="themeToggle" aria-label="Toggle theme">
+        <span class="icon-sun">☀️</span><span class="icon-moon">🌙</span>
+      </button>
+      <button class="toggle-btn" id="langToggle" aria-label="Toggle language">
+        <span data-i18n="langSwitchLabel">العربية</span>
+      </button>
+    </div>
   </div>
 </header>
 
 <div class="wrap">
   <section class="hero">
-    <p class="eyebrow">Compiled from real hackathon teams</p>
-    <h1 class="hero-title">Every AI tool your team used, <span class="accent">searchable in one place.</span></h1>
-    <p class="hero-sub">A reference directory of 38 AI assistants, coding agents, design tools, diagramming apps, and deployment platforms — what each one does, where it fits in your workflow, and how to use it. Type to search, or filter by category.</p>
+    <p class="eyebrow" data-i18n="eyebrow">A growing collection, updated regularly</p>
+    <h1 class="hero-title" data-i18n-html="heroTitle">Find the right AI tool, <span class="accent">in seconds.</span></h1>
+    <p class="hero-sub" data-i18n="heroSub">A practical directory of AI tools for assistants, coding, design, diagrams, project management, research, and deployment — what each tool does, how to use it, pricing, and pros &amp; cons. Search by name or by what you need to do.</p>
 
     <div class="console">
       <div class="console-bar">
         <div class="dot-row"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
-        <input id="search" type="text" placeholder="Search tools, features, or use cases… e.g. 'ERD', 'deploy', 'wireframe'" autocomplete="off">
+        <input id="search" type="text" data-i18n-placeholder="searchPlaceholder" placeholder="Search by tool name or task… e.g. 'database design', 'deploy a website', 'write code'" autocomplete="off">
         <span class="kbd">/</span>
       </div>
       <div class="filters" id="filters"></div>
@@ -40,7 +48,7 @@
 
   <main>
     <div class="grid" id="grid"></div>
-    <div class="empty" id="empty" style="display:none;">No tools match that search. Try a different keyword.</div>
+    <div class="empty" id="empty" style="display:none;" data-i18n="emptyState">No tools match that search. Try a different keyword.</div>
   </main>
 </div>
 
@@ -50,11 +58,13 @@
 
 <footer>
   <div class="wrap">
-    Built for hackathon teams &mdash; press <span style="color:var(--text)">/</span> to focus search, <span style="color:var(--text)">Esc</span> to close a card. Data compiled from 16 team submissions across a software documentation &amp; design hackathon.
+    <span data-i18n="footerText">A free reference for anyone looking for the right AI tool — press <kbd>/</kbd> to search, <kbd>Esc</kbd> to close a card.</span>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="data.js"></script>
+<script src="data-ar.js"></script>
 <script src="app.js"></script>
 
 </body>
